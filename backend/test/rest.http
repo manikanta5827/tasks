@@ -2,7 +2,7 @@
 @token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywibmFtZSI6ImpvaG5kb2UiLCJpYXQiOjE3MzQyNTY4OTksImV4cCI6MTczNDMwMDA5OX0.B6auTDrajXRo6W-grJsURPYYdBQ6IcUw6ykjtIRFX4Q
 
 ### Register User Account
-POST {{baseurl}}/auth/register
+POST https://tasks-3luj.onrender.com/auth/register
 Content-Type: application/json
 
 {
@@ -11,7 +11,7 @@ Content-Type: application/json
   "password": "password123"
 }
 ### Login User 
-POST {{baseurl}}/auth/login
+POST https://tasks-3luj.onrender.com/auth/login
 Content-Type: application/json
 
 {
