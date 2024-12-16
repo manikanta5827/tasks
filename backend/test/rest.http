@@ -1,0 +1,62 @@
+@baseurl=http://localhost:4000
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywibmFtZSI6ImpvaG5kb2UiLCJpYXQiOjE3MzQyNTY4OTksImV4cCI6MTczNDMwMDA5OX0.B6auTDrajXRo6W-grJsURPYYdBQ6IcUw6ykjtIRFX4Q
+
+### Register User Account
+POST {{baseurl}}/auth/register
+Content-Type: application/json
+
+{
+  "name": "johndoe",
+  "email": "johndoe@example.com",
+  "password": "password123"
+}
+### Login User 
+POST {{baseurl}}/auth/login
+Content-Type: application/json
+
+{
+  "email": "johndoe@example.com",
+  "password": "password123"
+}
+
+###Logout user
+POST {{baseurl}}/auth/logout
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+###Get all tasks
+GET {{baseurl}}/tasks
+Authorization: Bearer {{token}}
+
+### Create a TODO
+POST {{baseurl}}/tasks
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "title": "make project",
+  "start_time": "2024-12-14T11:00:00Z",
+  "end_time": "2024-12-14T21:00:00Z",
+  "priority": 3,
+  "status": "pending"
+}
+
+### Update a TODO
+PUT {{baseurl}}/tasks/4
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "title": "completed project",
+  "start_time": "2024-12-16T10:00:00Z",
+  "end_time": "2024-12-17T12:00:00Z",
+  "priority": 2,
+  "status": "finished"
+}
+
+### Delete a TODO
+DELETE {{baseurl}}/tasks/1
+Authorization: Bearer {{token}}
+
+
+

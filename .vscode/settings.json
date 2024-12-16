@@ -1,0 +1,40 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "Todo_Application",
+            "database": "todo",
+            "username": "chilaka",
+            "prettier.prettierPath": "prettier",
+            "editor.formatOnSave": true,
+            "eslint.enable": true,
+            "eslint.autoFixOnSave": true,
+            "editor.fontFamily": "Operator Mono Lig",
+            "editor.fontLigatures": true,
+            "editor.fontWeight": 100,
+            "workbench.colorTheme": "Operator Mono Dark Theme",
+            "emmet.includeLanguages": {
+                "javascript": "javascriptreact",
+                "typescript": "typescriptreact"
+            },
+            "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+        {
+            "pgOptions": {
+                "ssl": {
+                    "rejectUnauthorized": true
+                }
+            },
+            "previewLimit": 50,
+            "server": "dpg-ctfsk5q3esus73aueff0-a.oregon-postgres.render.com",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "cloud",
+            "database": "postgres_1j5j",
+            "username": "postgres_1j5j_user"
+        }
+    ]
+}
