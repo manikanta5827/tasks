@@ -1,13 +1,13 @@
-@baseurl=http://localhost:4000
-@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywibmFtZSI6ImpvaG5kb2UiLCJpYXQiOjE3MzQyNTY4OTksImV4cCI6MTczNDMwMDA5OX0.B6auTDrajXRo6W-grJsURPYYdBQ6IcUw6ykjtIRFX4Q
+@baseurl=https://tasks-3luj.onrender.com
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6Ik5hbmRoYSIsImlhdCI6MTczNDMzNjU3MiwiZXhwIjoxNzM0NDIyOTcyfQ.yuTnb50mp8-ZelWsK5tsZOar14_xCgBlO2304r58apM
 
 ### Register User Account
 POST https://tasks-3luj.onrender.com/auth/register
 Content-Type: application/json
 
 {
-  "name": "johndoe",
-  "email": "johndoe@example.com",
+  "name": "Nandha",
+  "email": "Nandha@example.com",
   "password": "password123"
 }
 ### Login User 
@@ -15,7 +15,7 @@ POST https://tasks-3luj.onrender.com/auth/login
 Content-Type: application/json
 
 {
-  "email": "johndoe@example.com",
+  "email": "Nandha@example.com",
   "password": "password123"
 }
 
@@ -25,24 +25,24 @@ Authorization: Bearer {{token}}
 Content-Type: application/json
 
 ###Get all tasks
-GET {{baseurl}}/tasks
+GET {{baseurl}}/todos
 Authorization: Bearer {{token}}
 
 ### Create a TODO
-POST {{baseurl}}/tasks
+POST {{baseurl}}/todos
 Content-Type: application/json
 Authorization: Bearer {{token}}
 
 {
-  "title": "make project",
+  "title": "work project",
   "start_time": "2024-12-14T11:00:00Z",
   "end_time": "2024-12-14T21:00:00Z",
-  "priority": 3,
+  "priority": 5,
   "status": "pending"
 }
 
 ### Update a TODO
-PUT {{baseurl}}/tasks/4
+PUT {{baseurl}}/todos/4
 Content-Type: application/json
 Authorization: Bearer {{token}}
 
@@ -55,7 +55,7 @@ Authorization: Bearer {{token}}
 }
 
 ### Delete a TODO
-DELETE {{baseurl}}/tasks/1
+DELETE {{baseurl}}/todos/1
 Authorization: Bearer {{token}}
 
 

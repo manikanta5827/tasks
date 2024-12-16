@@ -78,17 +78,17 @@ const TodoList = () => {
       start_time: new Date(currentTask.start_time).toISOString(),
       end_time: currentTask.end_time ? new Date(currentTask.end_time).toISOString() : null,
     };
-
+    closeForm();
     if (currentTask.id) {
-      // Update task
+
       settasks(tasks.map((task) => (task.id === currentTask.id ? { ...task, ...taskToSubmit } : task)));
       await api.put(`/todos/${currentTask.id}`, taskToSubmit);
     } else {
-      // Add new task
+
       const response = await api.post('/todos', taskToSubmit);
       settasks([...tasks, { ...taskToSubmit, id: response.data.id }]);
     }
-    closeForm();
+
   };
 
   const handleDelete = async (id) => {
